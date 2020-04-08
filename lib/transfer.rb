@@ -10,7 +10,7 @@ class Transfer
   end
 
   def valid? #can check that both accounts are valid"
-    if
+    if sender.valid? && receiver.valid?
       true
     else
       false
