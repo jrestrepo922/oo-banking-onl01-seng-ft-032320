@@ -8,4 +8,12 @@ class Transfer
     @amount = amount
     #binding.pry
   end
+
+  def valid? #can check that both accounts are valid"
+    if sender.valid? @@ reciever.valid?
+      true
+    else
+      false
+    end
+  end
 end
