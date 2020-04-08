@@ -18,6 +18,7 @@ class Transfer
   end
 
   def execute_transaction
+    binding.pry
     if self.status == "pending" && sender.balance >= self.amount && sender.status != "closed"
       sender.balance = sender.balance - self.amount
       receiver.balance = receiver.balance + self.amount
@@ -26,6 +27,5 @@ class Transfer
       "Transaction rejected. Please check your account balance."
       self.status = "rejected"
     end
-    binding.pry
   end
 end
