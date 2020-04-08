@@ -6,6 +6,6 @@ class Transfer
     @receiver = receiver
     @status = "pending"
     @amount = amount
-    binding.pry
+    #binding.pry
   end
 end
